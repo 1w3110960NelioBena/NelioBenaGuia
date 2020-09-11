@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Juego</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="main.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" href="Juego.css">
+   <link rel="shortcut icon" href="https://i.pinimg.com/564x/22/b6/7b/22b67b78e8af5a439f22024f003821a4.jpg">
+</head>
+<header>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+    </style> 
+	<h1>Adivinanza</h1>
+</header>
+
+<body>
+	<div class="fluid-container" id="Juego">
+    <div class="row">
+        <div class="col-md">
+        <section>
+			<div class="texto">
+	    <h2>Intenta adivinar un número entre 1 y 10</h2>
+		<h2>Sólo tienes 3 intentos posibles.</h2>
+	<p>¿Cuál es tu nombre? <input type="text" id="nombre"></p>
+	<button onclick="jugar_ahora()">Jugar</button>
+			</div>
+	<p id="rdo"></p>
+	<script>
+		function jugar_ahora() {
+
+			var max = 10;
+			var min = 1;
+			var cant_intentos = 3;
+			var acerto = false;
+			var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
+			var numero;
+
+			var nombre=document.getElementById("nombre").value;
+
+			if(nombre=="")
+			{
+				alert("Por favor, ingrese su  nombre para JUGAR");
+			}
+			else
+			{
+				while(cant_intentos>0 && acerto!=true)
+				{
+					cant_intentos--;
+					numero= parseInt( prompt("Ingrese el número"));
+					if (numero==numero_aleatorio)
+					{
+						alert("GANASTE!");
+						acerto=true;
+					}
+					else if (numero<numero_aleatorio)
+					{
+						alert("PISTA: es mayor");
+					}
+					else if (numero>numero_aleatorio)
+					{
+						alert("PISTA: es menor");
+					}
+					else
+					{
+						alert("Le quedan " + cant_intentos + " intentos");
+					}
+
+				}
+
+				document.getElementById("rdo").innerHTML="El número era: <strong>" + numero_aleatorio + "</strong>"
+			}
+
+		}
+
+	</script>
+
+</body>
+</div>
+</div>
+</div>
+</section>
+
+<nav>
+    
+    <ul>
+        <a href="index.html">HOME</a>
+    </ul>
+
+</nav>
+
+<script src="js/jquery.js"> </script>
+<script src="js/bootstrap.min.js"></script>
+</html>

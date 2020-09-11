@@ -1,0 +1,17 @@
+header{
+    font-family: 'Russo One', sans-serif;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+
+body{
+    background-color: rgb(160, 160, 160);
+
+}
+
+p{
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,47 @@
+body{
+  
+  background-image: url(https://i.pinimg.com/originals/df/b7/f0/dfb7f0440097a73435534809afff3491.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  vertical-align: middle;
+  margin: 0px;
+  width: 100%;
+  
+}
+
+header{
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    padding-left:100px ;
+    padding-right: 0px;
+}
+
+form{
+    margin-left: 300px;
+    margin-left: 300px auto;
+    margin-top: 5px;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(0, 0, 0);
+} 
+.nombre{
+  margin-bottom: 15px;
+}
+
+.email{
+  margin-bottom: 15px;
+}
+
+.boton{
+  margin-top: 20px;
+}
+
+.home{
+  text-align: justify;
+  margin-top: 50px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
